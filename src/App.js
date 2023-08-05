@@ -1,45 +1,60 @@
 import "./App.css";
-import pp from "./media/ProfliePic.jpeg"
+import pp from "./media/ProfliePic.jpeg";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 function App() {
   return (
     <div>
-      <div className="h-screen">
-        <div className="w-full h-[10%] flex justify-center items-center bg-yellow-300">
-          <navbar className="w-11/12 max-w-screen-xl flex flex-col md:flex-row justify-between items-center">
-            <h1>Yusuf Yiğit Aydemir</h1>
+      <div className="w-full shadow-2xl">
+        <nav className="w-11/12 max-w-screen-xl m-auto flex justify-between items-center h-[8vh]">
+          <h1 className="text-2xl font-bold">Yusuf Yiğit Aydemir</h1>
 
-            <nav className="w-5/6 sm:w-3/5 lg:w-2/5">
-              <ul className="w-full flex justify-between items-center">
-                <li>
-                  <a href="">Home</a>
+          <ul className="flex">
+            <li className="m-2 p-2 font-semibold">
+              <a href="#">Home</a>
+            </li>
+            <li className="m-2 p-2 font-semibold">
+              <a href="#">About</a>
+            </li>
+            <li className="m-2 p-2 font-semibold">
+              <a href="#">Projects</a>
+            </li>
+            <li className="m-2 p-2 font-semibold">
+              <a href="#">Blog</a>
+            </li>
+            <li className="m-2 p-2 font-semibold">
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div className="w-full bg-[#F5F8FA] h-[92vh]">
+        <div className="w-11/12 max-w-screen-xl m-auto py-10">
+          <div className="w-full flex mt-20 flex-col justify-center items-center">
+            <img src={pp} alt="Profile Picture" className="w-1/4 rounded-full p-2 border-2 border-gray hover:border-black" />
+
+            <div className="flex flex-col justify-center items-center">
+              <h1 className="text-7xl font-extrabold">
+                Front-End React Developer
+              </h1>
+              <p className="py-5 leading-7 tracking-wide text-xl">
+                Hi, I'm Stefan Topalovic. A passionate Front-end React
+                Developer based in Belgrade, Serbia.
+              </p>
+
+              <ul className="flex items-center">
+                <li className="mr-2">
+                  <a href="#" className="text-4xl">
+                    <FaLinkedin></FaLinkedin>
+                  </a>
                 </li>
                 <li>
-                  <a href="">About</a>
-                </li>
-                <li>
-                  <a href="">Projects</a>
-                </li>
-                <li>
-                  <a href="">Contact</a>
-                </li>
-                <li>
-                  <a href="">Resume</a>
+                  <a href="#" className="text-4xl">
+                    <FaGithub></FaGithub>
+                  </a>
                 </li>
               </ul>
-            </nav>
-          </navbar>
-        </div>
-
-        <div className="bg-blue-200 h-[90%] w-full flex justify-center items-start">
-          <div className="bg-yellow-200 mt-20 w-11/12 max-w-screen-xl flex flex-col sm:flex-row">
-            <div className="w-3/5">
-              <h1>Front-End React Developer</h1>
-              <p>Hi, I'm Yusuf Yiğit Aydemir. A passionate Front-End React developer based in Istanbul, Turkey.</p>
-            </div>
-
-            <div className="w-2/5">
-              <img src={pp} alt="Profile Picture" />
             </div>
           </div>
         </div>
