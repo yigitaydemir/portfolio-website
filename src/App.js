@@ -1,66 +1,154 @@
-import "./App.css";
-import pp from "./media/ProfliePic.jpeg";
+import { BsFillMoonStarsFill } from "react-icons/bs";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import pp from "./media/ProfliePic.jpeg";
+import design from "./media/design.png";
+import code from "./media/code.png";
+import consulting from "./media/consulting.png";
+import web1 from "./media/web1.png"
+import web2 from "./media/web2.png"
+import web3 from "./media/web3.png"
 
-function App() {
+const App = () => {
   return (
-    <div>
-      <div className="w-full shadow-2xl">
-        <nav className="w-11/12 max-w-screen-xl m-auto flex justify-between items-center h-[8vh]">
-          <h1 className="text-2xl font-bold">Yusuf Yiğit Aydemir</h1>
+    <div className="bg-white px-10 md:px-20 lg:px-40">
+      <section className="min-h-screen">
+        <nav className="py-10 mb-12 flex justify-between">
+          <h1 className="text-xl">Yusuf Yiğit Aydemir</h1>
 
-          <ul className="flex">
-            <li className="m-2 p-2 font-semibold">
-              <a href="#">Home</a>
+          <ul className="flex items-center">
+            <li>
+              <BsFillMoonStarsFill className="cursor-pointer text-2xl"></BsFillMoonStarsFill>
             </li>
-            <li className="m-2 p-2 font-semibold">
-              <a href="#">About</a>
-            </li>
-            <li className="m-2 p-2 font-semibold">
-              <a href="#">Projects</a>
-            </li>
-            <li className="m-2 p-2 font-semibold">
-              <a href="#">Blog</a>
-            </li>
-            <li className="m-2 p-2 font-semibold">
-              <a href="#">Contact</a>
+            <li>
+              <a
+                href="#"
+                className=" bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded ml-8"
+              >
+                Resume
+              </a>
             </li>
           </ul>
         </nav>
-      </div>
 
-      <div className="w-full bg-[#F5F8FA] h-[92vh]">
-        <div className="w-11/12 max-w-screen-xl m-auto py-10">
-          <div className="w-full flex mt-20 flex-col justify-center items-center">
-            <img src={pp} alt="Profile Picture" className="w-1/4 rounded-full p-2 border-2 border-gray hover:border-black" />
+        <div className="text-center p-10">
+          <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">
+            Yusuf Yiğit Aydemir
+          </h2>
+          <h3 className="text-2xl py-2 md:text-3xl">Front-End React Developer</h3>
+          <p className="text-md py-5 leading-8 text-gray-800 md:text-xl max-w-xl mx-auto">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita,
+            incidunt, delectus quidem voluptatum voluptatibus laudantium velit
+            ipsa suscipit sunt deserunt ab consectetur natus atque. Obcaecati
+            reprehenderit reiciendis repellat nulla dolor.
+          </p>
+        </div>
 
-            <div className="flex flex-col justify-center items-center">
-              <h1 className="text-7xl font-extrabold">
-                Front-End React Developer
-              </h1>
-              <p className="py-5 leading-7 tracking-wide text-xl">
-                Hi, I'm Stefan Topalovic. A passionate Front-end React
-                Developer based in Belgrade, Serbia.
-              </p>
+        <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
+          <a href="#">
+            <FaLinkedin></FaLinkedin>
+          </a>
+          <a href="#">
+            <FaGithub></FaGithub>
+          </a>
+        </div>
 
-              <ul className="flex items-center">
-                <li className="mr-2">
-                  <a href="#" className="text-4xl">
-                    <FaLinkedin></FaLinkedin>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-4xl">
-                    <FaGithub></FaGithub>
-                  </a>
-                </li>
-              </ul>
-            </div>
+        <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:w-96 md:h-96">
+          <img src={pp} alt="Profile Picture" className="w-full" />
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <h3 className="text-3xl py-1">Services I Offer</h3>
+          <p className="text-md py-2 leading-8 text-gray-800">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Accusantium placeat earum quam consectetur libero culpa sed dolore
+            adipisci. <span className="text-teal-500">Mollitia</span> placeat
+            accusantium reprehenderit tempora natus dicta quo dolor vitae
+            consectetur voluptatum.
+          </p>
+        </div>
+
+        <div className="lg:flex gap-10">
+          <div className="text-center shadow-lg p-10 rounded-xl my-10">
+            <img src={design} alt="" srcset="" className="w-24 h-24 m-auto" />
+            <h3 className="text-xl font-medium pt-8 pb-2">Beautiful Designs</h3>
+            <p className="py-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
+              maiores, eum iure, quibusdam officia, corrupti autem voluptas
+              obcaecati dolore maxime eligendi unde culpa illum quos facilis
+              laudantium! Ullam, explicabo? Quos.
+            </p>
+            <h4 className="py-4 text-teal-600">Design Tools I Use</h4>
+            <p className="text-gray-800 py-1">Photoshop</p>
+            <p className="text-gray-800 py-1">Illustrator</p>
+            <p className="text-gray-800 py-1">Figma</p>
+          </div>
+
+          <div className="text-center shadow-lg p-10 rounded-xl my-10">
+            <img src={code} alt="" srcset="" className="w-24 h-24 m-auto" />
+            <h3 className="text-xl font-medium pt-8 pb-2">Beautiful Designs</h3>
+            <p className="py-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
+              maiores, eum iure, quibusdam officia, corrupti autem voluptas
+              obcaecati dolore maxime eligendi unde culpa illum quos facilis
+              laudantium! Ullam, explicabo? Quos.
+            </p>
+            <h4 className="py-4 text-teal-600">Design Tools I Use</h4>
+            <p className="text-gray-800 py-1">Photoshop</p>
+            <p className="text-gray-800 py-1">Illustrator</p>
+            <p className="text-gray-800 py-1">Figma</p>
+          </div>
+
+          <div className="text-center shadow-lg p-10 rounded-xl my-10">
+            <img
+              src={consulting}
+              alt=""
+              srcset=""
+              className="w-24 h-24 m-auto"
+            />
+            <h3 className="text-xl font-medium pt-8 pb-2">Beautiful Designs</h3>
+            <p className="py-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
+              maiores, eum iure, quibusdam officia, corrupti autem voluptas
+              obcaecati dolore maxime eligendi unde culpa illum quos facilis
+              laudantium! Ullam, explicabo? Quos.
+            </p>
+            <h4 className="py-4 text-teal-600">Design Tools I Use</h4>
+            <p className="text-gray-800 py-1">Photoshop</p>
+            <p className="text-gray-800 py-1">Illustrator</p>
+            <p className="text-gray-800 py-1">Figma</p>
           </div>
         </div>
-      </div>
+      </section>
+
+      <section>
+        <div>
+          <h3 className="text-3xl py-1">Portfolio</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+            vero eos beatae similique debitis possimus nihil. Blanditiis itaque
+            autem ducimus. Quia, asperiores! Quasi soluta molestias repellat
+            quisquam cum accusantium aspernatur.
+          </p>
+        </div>
+
+        <div>
+            <div>
+                <img src={web1} alt="" srcset="" />
+            </div>
+
+            <div>
+                <img src={web2} alt="" srcset="" />
+            </div>
+
+            <div>
+                <img src={web3} alt="" srcset="" />
+            </div>
+        </div>
+      </section>
     </div>
   );
-}
+};
 
 export default App;
