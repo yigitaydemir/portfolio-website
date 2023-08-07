@@ -8,6 +8,8 @@ import web1 from "./media/web1.png";
 import web2 from "./media/web2.png";
 import web3 from "./media/web3.png";
 import { useState } from "react";
+import Lottie from "lottie-react"
+import animationData from "./media/about.json"
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -15,72 +17,83 @@ const App = () => {
   return (
     <div className={darkMode ? "dark" : ""}>
       <div className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900">
-        <section className="min-h-screen">
-          <nav className="py-10 mb-12 flex justify-between">
-            <h1 className="text-xl">Yusuf Yiğit Aydemir</h1>
+        <section className="min-h-screen bg-yellow-200">
+          <nav className="w-11/12 max-w-screen-xl m-auto py-10 flex justify-between bg-green-300">
+            <h1 className="text-xl dark:text-white">Yusuf Yiğit Aydemir</h1>
 
             <ul className="flex items-center">
-              <li>
-                <BsFillMoonStarsFill
-                  onClick={() => setDarkMode(!darkMode)}
-                  className="cursor-pointer text-2xl"
-                ></BsFillMoonStarsFill>
-              </li>
+              <li className="mx-2 dark:text-white">Home</li>
+              <li className="mx-2 dark:text-white">About</li>
+              <li className="mx-2 dark:text-white">Projects</li>
+              <li className="mx-2 dark:text-white">Blog</li>
+              <li className="mx-2 dark:text-white">Contact</li>
+
               <li>
                 <a
                   href="#"
-                  className=" bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded ml-8"
+                  className="mx-2 bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded"
                 >
                   Resume
                 </a>
               </li>
+              <li>
+                <BsFillMoonStarsFill
+                  onClick={() => setDarkMode(!darkMode)}
+                  className="cursor-pointer text-2xl dark:text-white"
+                ></BsFillMoonStarsFill>
+              </li>
             </ul>
           </nav>
 
-          <div className="text-center p-10">
+          <div className="bg-red-200 w-11/12 max-w-screen-xl m-auto text-center py-10">
+            <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-56 h-56 mb-20 overflow-hidden md:w-80 md:h-80">
+              <img src={pp} alt="Profile Picture" className="w-full" />
+            </div>
+
             <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">
               Yusuf Yiğit Aydemir
             </h2>
-            <h3 className="text-2xl py-2 md:text-3xl">
+            <h3 className="text-2xl py-2 md:text-3xl dark:text-white">
               Front-End React Developer
             </h3>
-            <p className="text-md py-5 leading-8 text-gray-800 md:text-xl max-w-xl mx-auto">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita,
-              incidunt, delectus quidem voluptatum voluptatibus laudantium velit
-              ipsa suscipit sunt deserunt ab consectetur natus atque. Obcaecati
-              reprehenderit reiciendis repellat nulla dolor.
+            <p className="text-md py-5 leading-8 text-gray-800 md:text-xl max-w-xl mx-auto dark:text-white">
+              Hi, I'm Yusuf Yiğit Aydemir. A passionate Front-end React
+              Developer based in Istanbul, Turkey.
             </p>
           </div>
 
-          <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
+          <div className="bg-green-200 w-11/12 max-w-screen-xl m-auto text-5xl flex justify-center gap-16 py-3 text-gray-600">
             <a href="#">
-              <FaLinkedin></FaLinkedin>
+              <FaLinkedin className="dark:text-white"></FaLinkedin>
             </a>
             <a href="#">
-              <FaGithub></FaGithub>
+              <FaGithub className="dark:text-white"></FaGithub>
             </a>
-          </div>
-
-          <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:w-96 md:h-96">
-            <img src={pp} alt="Profile Picture" className="w-full" />
           </div>
         </section>
 
-        <section>
+        <section className="bg-red-200 w-11/12 max-w-screen-xl m-auto flex">
           <div>
-            <h3 className="text-3xl py-1">Services I Offer</h3>
+            <Lottie animationData={animationData} className="w-96 bg-green-300"></Lottie>
+          </div>
+          <div className="w-3/4">
+            <h3 className="text-3xl py-1">About Me</h3>
             <p className="text-md py-2 leading-8 text-gray-800">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Accusantium placeat earum quam consectetur libero culpa sed dolore
-              adipisci. <span className="text-teal-500">Mollitia</span> placeat
-              accusantium reprehenderit tempora natus dicta quo dolor vitae
-              consectetur voluptatum.
+              Greetings! I am Yiğit, a dedicated Frontend Developer with a
+              strong focus on React.js and Tailwind CSS, complemented by Google
+              Firebase for robust backend solutions. I'm passionate about
+              crafting engaging user experiences and transforming designs into
+              functional web applications. Eager to expand my skill set, I'm on
+              a journey to learn Redux, Next.js, TypeScript, testing, and cloud
+              technologies like AWS. I thrive in collaborative environments and
+              always seek opportunities to grow and make a positive impact
+              through my work. Feel free to contact me anytime on any platform.
             </p>
           </div>
 
-          <div className="lg:flex gap-10">
+          {/* <div className="lg:flex gap-10">
             <div className="text-center shadow-lg p-10 rounded-xl my-10">
-              <img src={design} alt="" srcset="" className="w-24 h-24 m-auto" />
+              <img src={design} alt="" className="w-24 h-24 m-auto" />
               <h3 className="text-xl font-medium pt-8 pb-2">
                 Beautiful Designs
               </h3>
@@ -97,7 +110,7 @@ const App = () => {
             </div>
 
             <div className="text-center shadow-lg p-10 rounded-xl my-10">
-              <img src={code} alt="" srcset="" className="w-24 h-24 m-auto" />
+              <img src={code} alt="" className="w-24 h-24 m-auto" />
               <h3 className="text-xl font-medium pt-8 pb-2">
                 Beautiful Designs
               </h3>
@@ -114,12 +127,7 @@ const App = () => {
             </div>
 
             <div className="text-center shadow-lg p-10 rounded-xl my-10">
-              <img
-                src={consulting}
-                alt=""
-                srcset=""
-                className="w-24 h-24 m-auto"
-              />
+              <img src={consulting} alt="" className="w-24 h-24 m-auto" />
               <h3 className="text-xl font-medium pt-8 pb-2">
                 Beautiful Designs
               </h3>
@@ -134,7 +142,7 @@ const App = () => {
               <p className="text-gray-800 py-1">Illustrator</p>
               <p className="text-gray-800 py-1">Figma</p>
             </div>
-          </div>
+          </div> */}
         </section>
 
         <section>
