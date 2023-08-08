@@ -1,12 +1,8 @@
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { ImNewTab } from "react-icons/im";
 import pp from "./media/ProfliePic.jpeg";
-import design from "./media/design.png";
-import code from "./media/code.png";
-import consulting from "./media/consulting.png";
 import web1 from "./media/web1.png";
-import web2 from "./media/web2.png";
-import web3 from "./media/web3.png";
 import { useState } from "react";
 import Lottie from "lottie-react";
 import animationData from "./media/about.json";
@@ -22,11 +18,11 @@ const App = () => {
             <h1 className="text-xl dark:text-white">Yusuf Yiğit Aydemir</h1>
 
             <ul className="flex items-center">
-              <li className="mx-2 dark:text-white">Home</li>
+              {/* <li className="mx-2 dark:text-white">Home</li>
               <li className="mx-2 dark:text-white">About</li>
               <li className="mx-2 dark:text-white">Projects</li>
               <li className="mx-2 dark:text-white">Blog</li>
-              <li className="mx-2 dark:text-white">Contact</li>
+              <li className="mx-2 dark:text-white">Contact</li> */}
 
               <li>
                 <a
@@ -46,7 +42,7 @@ const App = () => {
           </nav>
 
           <div className=" w-11/12 max-w-screen-xl m-auto text-center py-10">
-            <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-56 h-56 mb-20 overflow-hidden md:w-80 md:h-80">
+            <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-56 h-56 mb-10 sm:mb-20 overflow-hidden md:w-80 md:h-80">
               <img src={pp} alt="Profile Picture" className="w-full" />
             </div>
 
@@ -72,17 +68,16 @@ const App = () => {
           </div>
         </section>
 
-        <section className="w-11/12 max-w-screen-xl m-auto flex flex-col lg:flex-row items-center lg:items-center">
+        <section className="w-11/12 max-w-screen-xl my-10 lg:my-0 min-h-screen m-auto flex flex-col xl:flex-row items-center lg:items-center gap-10">
           <div>
             <Lottie
               animationData={animationData}
-              className="w-1/2 lg:w-96 m-auto lg:m-0"
+              className="w-3/4 lg:w-96 m-auto lg:m-0 bg-gray-200 rounded-md"
             ></Lottie>
           </div>
           <div className="w-full lg:w-3/4 pl-0 lg:pl-10 flex flex-col justify-center">
             <h3 className="text-3xl py-1">About Me</h3>
-            <h3 className="text-5xl py-1">A dedicated Front-end Developer based in Istanbul, Turkey</h3>
-            <p className="text-md py-2 leading-8 text-gray-800">
+            <p className="text-md pt-2 leading-8 text-gray-800">
               Greetings! I am Yiğit, a dedicated Frontend Developer with a
               strong focus on React.js and Tailwind CSS, complemented by Google
               Firebase for robust backend solutions. I'm passionate about
@@ -95,85 +90,81 @@ const App = () => {
             </p>
           </div>
 
-          {/* <div className="lg:flex gap-10">
-            <div className="text-center shadow-lg p-10 rounded-xl my-10">
-              <img src={design} alt="" className="w-24 h-24 m-auto" />
-              <h3 className="text-xl font-medium pt-8 pb-2">
-                Beautiful Designs
-              </h3>
-              <p className="py-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-                maiores, eum iure, quibusdam officia, corrupti autem voluptas
-                obcaecati dolore maxime eligendi unde culpa illum quos facilis
-                laudantium! Ullam, explicabo? Quos.
-              </p>
-              <h4 className="py-4 text-teal-600">Design Tools I Use</h4>
-              <p className="text-gray-800 py-1">Photoshop</p>
-              <p className="text-gray-800 py-1">Illustrator</p>
-              <p className="text-gray-800 py-1">Figma</p>
-            </div>
-
-            <div className="text-center shadow-lg p-10 rounded-xl my-10">
-              <img src={code} alt="" className="w-24 h-24 m-auto" />
-              <h3 className="text-xl font-medium pt-8 pb-2">
-                Beautiful Designs
-              </h3>
-              <p className="py-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-                maiores, eum iure, quibusdam officia, corrupti autem voluptas
-                obcaecati dolore maxime eligendi unde culpa illum quos facilis
-                laudantium! Ullam, explicabo? Quos.
-              </p>
-              <h4 className="py-4 text-teal-600">Design Tools I Use</h4>
-              <p className="text-gray-800 py-1">Photoshop</p>
-              <p className="text-gray-800 py-1">Illustrator</p>
-              <p className="text-gray-800 py-1">Figma</p>
-            </div>
-
-            <div className="text-center shadow-lg p-10 rounded-xl my-10">
-              <img src={consulting} alt="" className="w-24 h-24 m-auto" />
-              <h3 className="text-xl font-medium pt-8 pb-2">
-                Beautiful Designs
-              </h3>
-              <p className="py-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-                maiores, eum iure, quibusdam officia, corrupti autem voluptas
-                obcaecati dolore maxime eligendi unde culpa illum quos facilis
-                laudantium! Ullam, explicabo? Quos.
-              </p>
-              <h4 className="py-4 text-teal-600">Design Tools I Use</h4>
-              <p className="text-gray-800 py-1">Photoshop</p>
-              <p className="text-gray-800 py-1">Illustrator</p>
-              <p className="text-gray-800 py-1">Figma</p>
-            </div>
-          </div> */}
         </section>
 
-        <section className="bg-red-200 w-11/12 max-w-screen-xl m-auto">
+        <section className="w-11/12 max-w-screen-xl m-auto pb-10">
           <div className="py-5">
             <h3 className="text-3xl py-1">Portfolio</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Perferendis vero eos beatae similique debitis possimus nihil.
-              Blanditiis itaque autem ducimus. Quia, asperiores! Quasi soluta
-              molestias repellat quisquam cum accusantium aspernatur.
+              I take pride in presenting the applications that showcases my
+              expertise in ReactJS, exemplifying my capabilities as a skilled
+              developer.
             </p>
           </div>
 
-          <div className="bg-yellow-200 w-full">
-            <div className="flex">
-              <img src={web1} alt="" className="w-2/5"/>
+          <div className="w-full shadow-lg p-10 rounded-xl mt-10">
+            <div className="flex flex-col md:flex-row">
+              <img src={web1} alt="" className="w-full md:w-2/5 rounded-lg" />
 
-              <div className="w-3/5">
-                <h1>Project Name</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quae error laboriosam corporis quaerat optio corrupti esse cum! Veniam ducimus sint perferendis reprehenderit et, accusantium temporibus necessitatibus eum natus deleniti?</p>
-                <ul>
-                  <li><a href="#">See Code</a></li>
-                  <li><a href="#">See Demo</a></li>
+              <div className="w-full md:w-3/5 md:px-5">
+                <h1 className="pt-10 md:pt-0">Project Name</h1>
+                <p className="py-5">
+                  The primary purpose of this application is to provide users
+                  with the ability to monitor cryptocurrency prices and assess
+                  their historical performance through interactive charts. By
+                  signing up with your Google account, you can effortlessly
+                  personalize your experience by adding your preferred
+                  cryptocurrencies to a designated watchlist.
+                </p>
+                <ul className="list-disc px-4">
+                  <li>
+                    The application is developed using ReactJS, a powerful
+                    JavaScript framework.
+                  </li>
+                  <li>
+                    Cryptocurrency prices are fetched from the Coinranking API,
+                    ensuring real-time and accurate data.
+                  </li>
+                  <li>
+                    The fetched data is visualized using Tradingview Lightweight
+                    Charts, offering interactive and intuitive charting
+                    capabilities.
+                  </li>
+                  <li>
+                    Styling is implemented with the assistance of TailwindCSS
+                    and Flowbite, enhancing the application's aesthetic appeal
+                    and user interface.
+                  </li>
+                  <li>
+                    Authentication functionality is implemented using Google
+                    Firebase, providing secure and reliable user authentication
+                    through Google accounts.
+                  </li>
+                  <li>
+                    Watchlist feature powered by Google Firestore database,
+                    enabling users to track and manage their favorite
+                    cryptocurrencies in real-time within their portfolio.
+                  </li>
+                </ul>
+
+                <ul className="flex justify-center">
+                  <li className="m-1 p-1 flex items-center text-xl">
+                    <a href="#" className="p-1">
+                      Code
+                    </a>
+                    <FaGithub></FaGithub>
+                  </li>
+                  <li className="m-1 p-1 flex items-center text-xl">
+                    <a href="#" className="p-1">
+                      Demo
+                    </a>
+                    <ImNewTab></ImNewTab>
+                  </li>
                 </ul>
               </div>
             </div>
           </div>
+
         </section>
       </div>
     </div>
