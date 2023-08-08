@@ -8,8 +8,8 @@ import web1 from "./media/web1.png";
 import web2 from "./media/web2.png";
 import web3 from "./media/web3.png";
 import { useState } from "react";
-import Lottie from "lottie-react"
-import animationData from "./media/about.json"
+import Lottie from "lottie-react";
+import animationData from "./media/about.json";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -17,8 +17,8 @@ const App = () => {
   return (
     <div className={darkMode ? "dark" : ""}>
       <div className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900">
-        <section className="min-h-screen bg-yellow-200">
-          <nav className="w-11/12 max-w-screen-xl m-auto py-10 flex justify-between bg-green-300">
+        <section className="min-h-screen">
+          <nav className="w-11/12 max-w-screen-xl m-auto py-10 flex justify-between ">
             <h1 className="text-xl dark:text-white">Yusuf Yiğit Aydemir</h1>
 
             <ul className="flex items-center">
@@ -45,7 +45,7 @@ const App = () => {
             </ul>
           </nav>
 
-          <div className="bg-red-200 w-11/12 max-w-screen-xl m-auto text-center py-10">
+          <div className=" w-11/12 max-w-screen-xl m-auto text-center py-10">
             <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-56 h-56 mb-20 overflow-hidden md:w-80 md:h-80">
               <img src={pp} alt="Profile Picture" className="w-full" />
             </div>
@@ -62,7 +62,7 @@ const App = () => {
             </p>
           </div>
 
-          <div className="bg-green-200 w-11/12 max-w-screen-xl m-auto text-5xl flex justify-center gap-16 py-3 text-gray-600">
+          <div className=" w-11/12 max-w-screen-xl m-auto text-5xl flex justify-center gap-16 py-3 text-gray-600">
             <a href="#">
               <FaLinkedin className="dark:text-white"></FaLinkedin>
             </a>
@@ -72,12 +72,16 @@ const App = () => {
           </div>
         </section>
 
-        <section className="bg-red-200 w-11/12 max-w-screen-xl m-auto flex">
+        <section className="w-11/12 max-w-screen-xl m-auto flex flex-col lg:flex-row items-center lg:items-center">
           <div>
-            <Lottie animationData={animationData} className="w-96 bg-green-300"></Lottie>
+            <Lottie
+              animationData={animationData}
+              className="w-1/2 lg:w-96 m-auto lg:m-0"
+            ></Lottie>
           </div>
-          <div className="w-3/4">
+          <div className="w-full lg:w-3/4 pl-0 lg:pl-10 flex flex-col justify-center">
             <h3 className="text-3xl py-1">About Me</h3>
+            <h3 className="text-5xl py-1">A dedicated Front-end Developer based in Istanbul, Turkey</h3>
             <p className="text-md py-2 leading-8 text-gray-800">
               Greetings! I am Yiğit, a dedicated Frontend Developer with a
               strong focus on React.js and Tailwind CSS, complemented by Google
@@ -145,8 +149,8 @@ const App = () => {
           </div> */}
         </section>
 
-        <section>
-          <div>
+        <section className="bg-red-200 w-11/12 max-w-screen-xl m-auto">
+          <div className="py-5">
             <h3 className="text-3xl py-1">Portfolio</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -156,32 +160,18 @@ const App = () => {
             </p>
           </div>
 
-          <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
-            <div className="basis-1/3 flex-1">
-              <img
-                src={web1}
-                alt=""
-                srcset=""
-                className="rounded-lg object-cover w-full h-full"
-              />
-            </div>
+          <div className="bg-yellow-200 w-full">
+            <div className="flex">
+              <img src={web1} alt="" className="w-2/5"/>
 
-            <div className="basis-1/3 flex-1">
-              <img
-                src={web2}
-                alt=""
-                srcset=""
-                className="rounded-lg object-cover w-full h-full"
-              />
-            </div>
-
-            <div className="basis-1/3 flex-1">
-              <img
-                src={web3}
-                alt=""
-                srcset=""
-                className="rounded-lg object-cover w-full h-full"
-              />
+              <div className="w-3/5">
+                <h1>Project Name</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quae error laboriosam corporis quaerat optio corrupti esse cum! Veniam ducimus sint perferendis reprehenderit et, accusantium temporibus necessitatibus eum natus deleniti?</p>
+                <ul>
+                  <li><a href="#">See Code</a></li>
+                  <li><a href="#">See Demo</a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
