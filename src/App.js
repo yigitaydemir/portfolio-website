@@ -89,7 +89,6 @@ const App = () => {
               through my work. Feel free to contact me anytime on any platform.
             </p>
           </div>
-
         </section>
 
         <section className="w-11/12 max-w-screen-xl m-auto pb-10">
@@ -103,12 +102,12 @@ const App = () => {
           </div>
 
           <div className="w-full shadow-lg p-10 rounded-xl mt-10">
-            <div className="flex flex-col md:flex-row">
-              <img src={web1} alt="" className="w-full md:w-2/5 rounded-lg" />
+            <div className="flex flex-col xl:flex-row">
+              <img src={web1} alt="" className="w-full xl:w-2/5 rounded-lg" />
 
-              <div className="w-full md:w-3/5 md:px-5">
-                <h1 className="pt-10 md:pt-0">Project Name</h1>
-                <p className="py-5">
+              <div className="w-full xl:w-3/5 xl:px-5">
+                <h1 className="pt-10 xl:pt-0 text-2xl">CoinPort</h1>
+                <p className="py-5 text-md leading-7 text-gray-800">
                   The primary purpose of this application is to provide users
                   with the ability to monitor cryptocurrency prices and assess
                   their historical performance through interactive charts. By
@@ -116,33 +115,82 @@ const App = () => {
                   personalize your experience by adding your preferred
                   cryptocurrencies to a designated watchlist.
                 </p>
-                <ul className="list-disc px-4">
+                <ul className="list-disc px-4 text-md leading-7 text-gray-800">
                   <li>
-                    The application is developed using ReactJS, a powerful
-                    JavaScript framework.
+                    The application is developed using{" "}
+                    <a
+                      href="https://legacy.reactjs.org/"
+                      target="blank"
+                      className="text-cyan-800"
+                    >
+                      ReactJS
+                    </a>
+                    , a powerful JavaScript framework.
                   </li>
                   <li>
-                    Cryptocurrency prices are fetched from the Coinranking API,
-                    ensuring real-time and accurate data.
+                    Cryptocurrency prices are fetched from the{" "}
+                    <a
+                      href="https://developers.coinranking.com/api"
+                      target="blank"
+                      className="text-cyan-800"
+                    >
+                      Coinranking API
+                    </a>
+                    , ensuring real-time and accurate data.
                   </li>
                   <li>
-                    The fetched data is visualized using Tradingview Lightweight
-                    Charts, offering interactive and intuitive charting
-                    capabilities.
+                    The fetched data is visualized using{" "}
+                    <a
+                      href="https://www.tradingview.com/lightweight-charts/"
+                      target="blank"
+                      className="text-cyan-800"
+                    >
+                      Tradingview Lightweight Charts
+                    </a>
+                    , offering interactive and intuitive charting capabilities.
                   </li>
                   <li>
-                    Styling is implemented with the assistance of TailwindCSS
-                    and Flowbite, enhancing the application's aesthetic appeal
-                    and user interface.
+                    Styling is implemented with the assistance of{" "}
+                    <a
+                      href="https://tailwindcss.com/"
+                      target="blank"
+                      className="text-cyan-800"
+                    >
+                      TailwindCSS
+                    </a>{" "}
+                    and{" "}
+                    <a
+                      href="https://www.flowbite-react.com/"
+                      target="blank"
+                      className="text-cyan-800"
+                    >
+                      Flowbite
+                    </a>
+                    , enhancing the application's aesthetic appeal and user
+                    interface.
                   </li>
                   <li>
-                    Authentication functionality is implemented using Google
-                    Firebase, providing secure and reliable user authentication
-                    through Google accounts.
+                    Authentication functionality is implemented using{" "}
+                    <a
+                      href="https://firebase.google.com/"
+                      target="blank"
+                      className="text-cyan-800"
+                    >
+                      Google Firebase
+                    </a>
+                    , providing secure and reliable user authentication through
+                    Google accounts.
                   </li>
                   <li>
-                    Watchlist feature powered by Google Firestore database,
-                    enabling users to track and manage their favorite
+                    Watchlist feature powered by{" "}
+                    <a
+                      href="https://firebase.google.com/docs/firestore/quickstart?hl=tr"
+                      target="blank"
+                      className="text-cyan-800"
+                    >
+                      Google Firestore
+                    </a>{" "}
+                    database, enabling users to track and manage their favorite
                     cryptocurrencies in real-time within their portfolio.
                   </li>
                 </ul>
@@ -164,7 +212,6 @@ const App = () => {
               </div>
             </div>
           </div>
-
         </section>
       </div>
     </div>
