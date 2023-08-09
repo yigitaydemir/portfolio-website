@@ -6,6 +6,7 @@ import web1 from "./media/web1.png";
 import { useState } from "react";
 import Lottie from "lottie-react";
 import animationData from "./media/about.json";
+import { Link } from "react-scroll";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -18,11 +19,59 @@ const App = () => {
             <h1 className="text-xl dark:text-white">Yusuf Yiğit Aydemir</h1>
 
             <ul className="flex items-center">
-              {/* <li className="mx-2 dark:text-white">Home</li>
-              <li className="mx-2 dark:text-white">About</li>
-              <li className="mx-2 dark:text-white">Projects</li>
-              <li className="mx-2 dark:text-white">Blog</li>
-              <li className="mx-2 dark:text-white">Contact</li> */}
+              <li>
+                <Link
+                  className="mx-2 dark:text-white"
+                  to="/"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="mx-2 dark:text-white"
+                  to="about"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                >
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="mx-2 dark:text-white"
+                  to="projects"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                >
+                  Projects
+                </Link>
+              </li>
+              <li>
+                <a
+                  href="https://medium.com/@yusufyaydemir"
+                  className="mx-2 dark:text-white"
+                  target="blank"
+                >
+                  Blog
+                </a>
+              </li>
+              <li>
+                <Link
+                  className="mx-2 dark:text-white"
+                  to="contact"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                >
+                  Contact
+                </Link>
+              </li>
 
               <li>
                 <a
@@ -68,7 +117,10 @@ const App = () => {
           </div>
         </section>
 
-        <section className="w-11/12 max-w-screen-xl my-10 lg:my-0 min-h-screen m-auto flex flex-col xl:flex-row items-center lg:items-center gap-10">
+        <section
+          id="about"
+          className="w-11/12 max-w-screen-xl my-10 lg:my-0 min-h-screen m-auto flex flex-col xl:flex-row items-center lg:items-center gap-10"
+        >
           <div>
             <Lottie
               animationData={animationData}
@@ -91,9 +143,9 @@ const App = () => {
           </div>
         </section>
 
-        <section className="w-11/12 max-w-screen-xl m-auto pb-10">
+        <section id="projects" className="w-11/12 max-w-screen-xl m-auto pb-10">
           <div className="py-5">
-            <h3 className="text-3xl py-1">Portfolio</h3>
+            <h3 className="text-3xl py-1">Projects</h3>
             <p>
               I take pride in presenting the applications that showcases my
               expertise in ReactJS, exemplifying my capabilities as a skilled
@@ -210,6 +262,32 @@ const App = () => {
                   </li>
                 </ul>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="contact"
+          className="bg-yellow-200 w-11/12 max-w-screen-xl m-auto py-10"
+        >
+          <h1 className="text-3xl py-1">Contact Me</h1>
+          <p className="text-md leading-7 text-gray-800">I am open to work. Please feel free to contact me anytime.</p>
+
+          <div className="bg-red-200 grid grid-cols-2">
+            <div className="py-5 text-md leading-7 text-gray-800">
+              <p>Email Me!</p>
+              <p>yusufyigitaydemir@gmail.com</p>
+              <p>or</p>
+              <p>Contact Me on LinkedIn</p>
+            </div>
+
+            <div className="py-5 text-md leading-7 text-gray-800">
+              <p>Others</p>
+              <ul>
+                <li>Github</li>
+                <li>Medium</li>
+                <li>LeetCode</li>
+              </ul>
             </div>
           </div>
         </section>
