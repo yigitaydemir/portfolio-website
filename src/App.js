@@ -8,6 +8,8 @@ import Lottie from "lottie-react";
 import animationData from "./media/about.json";
 import { Link } from "react-scroll";
 
+//test kodu
+
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
 
@@ -153,7 +155,7 @@ const App = () => {
             </p>
           </div>
 
-          <div className="w-full shadow-lg p-10 rounded-xl mt-10">
+          <div className="w-full shadow-lg p-10 rounded-xl mt-10 dark:bg-white">
             <div className="flex flex-col xl:flex-row">
               <img src={web1} alt="" className="w-full xl:w-2/5 rounded-lg" />
 
