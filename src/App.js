@@ -30,7 +30,7 @@ const App = () => {
                 <ul className="hidden sm:flex sm:items-center">
                   <li>
                     <Link
-                      className="mx-2 cursor-pointer hover:text-cyan-500 duration-300 dark:text-white"
+                      className="mx-2 cursor-pointer hover:text-teal-600 dark:hover:text-teal-600 duration-300 dark:text-white"
                       to="home"
                       spy={true}
                       smooth={true}
@@ -41,7 +41,7 @@ const App = () => {
                   </li>
                   <li>
                     <Link
-                      className="mx-2 cursor-pointer hover:text-cyan-500 duration-300 dark:text-white"
+                      className="mx-2 cursor-pointer hover:text-teal-600 dark:hover:text-teal-600 duration-300 dark:text-white"
                       to="about"
                       spy={true}
                       smooth={true}
@@ -52,7 +52,7 @@ const App = () => {
                   </li>
                   <li>
                     <Link
-                      className="mx-2 cursor-pointer hover:text-cyan-500 duration-300 dark:text-white"
+                      className="mx-2 cursor-pointer hover:text-teal-600 dark:hover:text-teal-600 duration-300 dark:text-white"
                       to="projects"
                       spy={true}
                       smooth={true}
@@ -64,7 +64,7 @@ const App = () => {
                   <li>
                     <a
                       href="https://medium.com/@yusufyaydemir"
-                      className="mx-2 cursor-pointer hover:text-cyan-500 duration-300 dark:text-white"
+                      className="mx-2 cursor-pointer hover:text-teal-600 dark:hover:text-teal-600 duration-300 dark:text-white"
                       target="blank"
                     >
                       Blog
@@ -72,7 +72,7 @@ const App = () => {
                   </li>
                   <li>
                     <Link
-                      className="mx-2 cursor-pointer hover:text-cyan-500 duration-300 dark:text-white"
+                      className="mx-2 cursor-pointer hover:text-teal-600 dark:hover:text-teal-600 duration-300 dark:text-white"
                       to="contact"
                       spy={true}
                       smooth={true}
@@ -113,7 +113,7 @@ const App = () => {
               <ul className="flex flex-col justify-center items-center text-center">
                 <li className="p-2 w-full border-y border-black">
                   <Link
-                    className="cursor-pointer hover:text-cyan-500 duration-300 dark:text-white"
+                    className="cursor-pointer hover:text-teal-600 dark:hover:text-teal-600 duration-300 dark:text-white"
                     to="home"
                     spy={true}
                     smooth={true}
@@ -125,7 +125,7 @@ const App = () => {
                 </li>
                 <li className="p-2 w-full border-b border-black">
                   <Link
-                    className="cursor-pointer hover:text-cyan-500 duration-300 dark:text-white"
+                    className="cursor-pointer hover:text-teal-600 dark:hover:text-teal-600 duration-300 dark:text-white"
                     to="about"
                     spy={true}
                     smooth={true}
@@ -137,7 +137,7 @@ const App = () => {
                 </li>
                 <li className="p-2 w-full border-b border-black">
                   <Link
-                    className="cursor-pointer hover:text-cyan-500 duration-300 dark:text-white"
+                    className="cursor-pointer hover:text-teal-600 dark:hover:text-teal-600 duration-300 dark:text-white"
                     to="projects"
                     spy={true}
                     smooth={true}
@@ -150,7 +150,7 @@ const App = () => {
                 <li className="p-2 w-full border-b border-black">
                   <a
                     href="https://medium.com/@yusufyaydemir"
-                    className="mx-2 cursor-pointer hover:text-cyan-500 duration-300 dark:text-white"
+                    className="mx-2 cursor-pointer hover:text-teal-600 dark:hover:text-teal-600 duration-300 dark:text-white"
                     target="blank"
                     onClick={handleMenu}
                   >
@@ -159,7 +159,7 @@ const App = () => {
                 </li>
                 <li className="p-2">
                   <Link
-                    className="cursor-pointer hover:text-cyan-500 duration-300 dark:text-white"
+                    className="cursor-pointer hover:text-teal-600 dark:hover:text-teal-600 duration-300 dark:text-white"
                     to="contact"
                     spy={true}
                     smooth={true}
@@ -202,7 +202,7 @@ const App = () => {
 
         <section
           id="about"
-          className="w-11/12 max-w-screen-xl min-h-screen m-auto flex flex-col xl:flex-row items-center justify-center"
+          className="w-11/12 max-w-screen-xl min-h-screen m-auto flex flex-col xl:flex-row items-center justify-center pt-[8rem] sm:pt-0"
         >
           <div>
             <Lottie
@@ -226,7 +226,10 @@ const App = () => {
           </div>
         </section>
 
-        <section id="projects" className="w-11/12 max-w-screen-xl m-auto pt-20 pb-10 sm:pb-0 min-h-screen">
+        <section
+          id="projects"
+          className="w-11/12 max-w-screen-xl m-auto pt-20 pb-10 sm:pb-0 min-h-screen"
+        >
           <div className="py-5">
             <h3 className="text-3xl py-1 text-teal-600">Projects</h3>
             <p className="dark:text-white">
@@ -332,13 +335,21 @@ const App = () => {
 
                 <ul className="flex justify-center">
                   <li className="m-1 p-1 flex items-center text-xl">
-                    <a href="https://github.com/yigitaydemir/coinport" target="blank" className="p-1">
+                    <a
+                      href="https://github.com/yigitaydemir/coinport"
+                      target="blank"
+                      className="p-1"
+                    >
                       Code
                     </a>
                     <FaGithub></FaGithub>
                   </li>
                   <li className="m-1 p-1 flex items-center text-xl">
-                    <a href="https://coinport.vercel.app/" target="blank" className="p-1">
+                    <a
+                      href="https://coinport.vercel.app/"
+                      target="blank"
+                      className="p-1"
+                    >
                       Demo
                     </a>
                     <ImNewTab></ImNewTab>
@@ -351,30 +362,22 @@ const App = () => {
 
         <section
           id="contact"
-          className="bg-yellow-200 w-11/12 max-w-screen-xl m-auto min-h-screen flex flex-col justify-center items-center"
+          className="w-11/12 max-w-screen-xl m-auto min-h-screen flex flex-col justify-center pt-10 sm:pt-0"
         >
-          <h1 className="text-3xl py-1">Contact Me</h1>
-          <p className="text-md leading-7 text-gray-800">
-            I am open to work. Please feel free to contact me anytime.
+          <p className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-teal-600 font-bold">Interested? <br /> Let's Get in Touch!</p>
+          <p className="py-10 w-3/4 text-md sm:text-lg md:text-xl lg:text-2xl leading-8 text-gray-800 dark:text-white">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim nam
+            debitis iste fugit impedit placeat eos, laudantium deleniti quam
+            architecto saepe obcaecati quod assumenda laborum voluptas? At
+            laborum neque totam?
           </p>
 
-          <div className="bg-red-200 grid grid-cols-2">
-            <div className="py-5 text-md leading-7 text-gray-800">
-              <p>Email Me!</p>
-              <p>yusufyigitaydemir@gmail.com</p>
-              <p>or</p>
-              <p>Contact Me on LinkedIn</p>
-            </div>
-
-            <div className="py-5 text-md leading-7 text-gray-800">
-              <p>Others</p>
-              <ul>
-                <li>Github</li>
-                <li>Medium</li>
-                <li>LeetCode</li>
-              </ul>
-            </div>
-          </div>
+          <ul className="flex">
+            <li className="mr-4 md:mr-10 pr-4 md:pr-10 text-4xl sm:text-5xl dark:text-white"><a href="#"><FaGithub></FaGithub></a></li>
+            <li className="mr-4 md:mr-10 pr-4 md:pr-10 text-4xl sm:text-5xl dark:text-white"><a href="#"><FaGithub></FaGithub></a></li>
+            <li className="mr-4 md:mr-10 pr-4 md:pr-10 text-4xl sm:text-5xl dark:text-white"><a href="#"><FaGithub></FaGithub></a></li>
+            <li className="mr-4 md:mr-10 pr-4 md:pr-10 text-4xl sm:text-5xl dark:text-white"><a href="#"><FaGithub></FaGithub></a></li>
+          </ul>
         </section>
       </div>
     </div>
