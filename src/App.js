@@ -21,7 +21,7 @@ const App = () => {
   return (
     <div className={darkMode ? "dark" : ""}>
       <div className="bg-white dark:bg-gray-900">
-        <section className="min-h-screen relative">
+        <section id="home" className="min-h-screen relative">
           <div className="w-full shadow-xl dark:bg-gray-800 fixed z-10 bg-white">
             <nav className="w-full sm:w-11/12 max-w-screen-xl m-auto py-5 px-5 sm:px-0 flex justify-between items-center">
               <h1 className="text-xl dark:text-white">Yusuf Yiğit Aydemir</h1>
@@ -31,7 +31,7 @@ const App = () => {
                   <li>
                     <Link
                       className="mx-2 cursor-pointer hover:text-cyan-500 duration-300 dark:text-white"
-                      to="/"
+                      to="home"
                       spy={true}
                       smooth={true}
                       duration={500}
@@ -114,7 +114,7 @@ const App = () => {
                 <li className="p-2 w-full border-y border-black">
                   <Link
                     className="cursor-pointer hover:text-cyan-500 duration-300 dark:text-white"
-                    to="/"
+                    to="home"
                     spy={true}
                     smooth={true}
                     duration={500}
@@ -191,18 +191,18 @@ const App = () => {
           </div>
 
           <div className=" w-11/12 max-w-screen-xl m-auto text-5xl flex justify-center gap-16 py-3 text-gray-600">
-            <a href="#">
-              <FaLinkedin className="dark:text-white"></FaLinkedin>
+            <a href="https://www.linkedin.com/in/yusufyaydemir/" target="blank">
+              <FaLinkedin className="text-[#0e76a8] dark:text-white"></FaLinkedin>
             </a>
-            <a href="#">
-              <FaGithub className="dark:text-white"></FaGithub>
+            <a href="https://github.com/yigitaydemir" target="blank">
+              <FaGithub className="text-[#c9510c] dark:text-white"></FaGithub>
             </a>
           </div>
         </section>
 
         <section
           id="about"
-          className="w-11/12 max-w-screen-xl my-10 lg:my-0 min-h-screen m-auto flex flex-col xl:flex-row items-center lg:items-center gap-10"
+          className="w-11/12 max-w-screen-xl min-h-screen m-auto flex flex-col xl:flex-row items-center justify-center"
         >
           <div>
             <Lottie
@@ -211,8 +211,8 @@ const App = () => {
             ></Lottie>
           </div>
           <div className="w-full lg:w-3/4 pl-0 lg:pl-10 flex flex-col justify-center text-center sm:text-left">
-            <h3 className="text-3xl py-1">About Me</h3>
-            <p className="text-md pt-2 leading-8 text-gray-800">
+            <h3 className="text-3xl py-1 text-teal-600">About Me</h3>
+            <p className="text-md pt-2 leading-8 text-gray-800 dark:text-white">
               Greetings! I am Yiğit, a dedicated Frontend Developer with a
               strong focus on React.js and Tailwind CSS, complemented by Google
               Firebase for robust backend solutions. I'm passionate about
@@ -226,10 +226,10 @@ const App = () => {
           </div>
         </section>
 
-        <section id="projects" className="w-11/12 max-w-screen-xl m-auto pb-10">
+        <section id="projects" className="w-11/12 max-w-screen-xl m-auto pt-20 pb-10 sm:pb-0 min-h-screen">
           <div className="py-5">
-            <h3 className="text-3xl py-1">Projects</h3>
-            <p>
+            <h3 className="text-3xl py-1 text-teal-600">Projects</h3>
+            <p className="dark:text-white">
               I take pride in presenting the applications that showcases my
               expertise in ReactJS, exemplifying my capabilities as a skilled
               developer.
@@ -332,13 +332,13 @@ const App = () => {
 
                 <ul className="flex justify-center">
                   <li className="m-1 p-1 flex items-center text-xl">
-                    <a href="#" className="p-1">
+                    <a href="https://github.com/yigitaydemir/coinport" target="blank" className="p-1">
                       Code
                     </a>
                     <FaGithub></FaGithub>
                   </li>
                   <li className="m-1 p-1 flex items-center text-xl">
-                    <a href="#" className="p-1">
+                    <a href="https://coinport.vercel.app/" target="blank" className="p-1">
                       Demo
                     </a>
                     <ImNewTab></ImNewTab>
@@ -351,7 +351,7 @@ const App = () => {
 
         <section
           id="contact"
-          className="bg-yellow-200 w-11/12 max-w-screen-xl m-auto py-10"
+          className="bg-yellow-200 w-11/12 max-w-screen-xl m-auto min-h-screen flex flex-col justify-center items-center"
         >
           <h1 className="text-3xl py-1">Contact Me</h1>
           <p className="text-md leading-7 text-gray-800">
