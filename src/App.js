@@ -7,94 +7,175 @@ import { useState } from "react";
 import Lottie from "lottie-react";
 import animationData from "./media/about.json";
 import { Link } from "react-scroll";
-
-//test kodu
+import { GiHamburgerMenu } from "react-icons/gi";
+import { RxCross2 } from "react-icons/rx";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
+
+  const handleMenu = () => {
+    setShowMenu(!showMenu);
+  };
 
   return (
     <div className={darkMode ? "dark" : ""}>
-      <div className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900">
-        <section className="min-h-screen">
-          <nav className="w-11/12 max-w-screen-xl m-auto py-10 flex justify-between ">
-            <h1 className="text-xl dark:text-white">Yusuf Yiğit Aydemir</h1>
+      <div className="bg-white dark:bg-gray-900">
+        <section className="min-h-screen relative">
+          <div className="w-full shadow-xl dark:bg-gray-800 fixed z-10 bg-white">
+            <nav className="w-full sm:w-11/12 max-w-screen-xl m-auto py-5 px-5 sm:px-0 flex justify-between items-center">
+              <h1 className="text-xl dark:text-white">Yusuf Yiğit Aydemir</h1>
 
-            <ul className="flex items-center">
-              <li>
-                <Link
-                  className="mx-2 dark:text-white"
-                  to="/"
-                  spy={true}
-                  smooth={true}
-                  duration={500}
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="mx-2 dark:text-white"
-                  to="about"
-                  spy={true}
-                  smooth={true}
-                  duration={500}
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="mx-2 dark:text-white"
-                  to="projects"
-                  spy={true}
-                  smooth={true}
-                  duration={500}
-                >
-                  Projects
-                </Link>
-              </li>
-              <li>
-                <a
-                  href="https://medium.com/@yusufyaydemir"
-                  className="mx-2 dark:text-white"
-                  target="blank"
-                >
-                  Blog
-                </a>
-              </li>
-              <li>
-                <Link
-                  className="mx-2 dark:text-white"
-                  to="contact"
-                  spy={true}
-                  smooth={true}
-                  duration={500}
-                >
-                  Contact
-                </Link>
-              </li>
+              <div className="flex items-center">
+                <ul className="hidden sm:flex sm:items-center">
+                  <li>
+                    <Link
+                      className="mx-2 cursor-pointer hover:text-cyan-500 duration-300 dark:text-white"
+                      to="/"
+                      spy={true}
+                      smooth={true}
+                      duration={500}
+                    >
+                      Home
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="mx-2 cursor-pointer hover:text-cyan-500 duration-300 dark:text-white"
+                      to="about"
+                      spy={true}
+                      smooth={true}
+                      duration={500}
+                    >
+                      About
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="mx-2 cursor-pointer hover:text-cyan-500 duration-300 dark:text-white"
+                      to="projects"
+                      spy={true}
+                      smooth={true}
+                      duration={500}
+                    >
+                      Projects
+                    </Link>
+                  </li>
+                  <li>
+                    <a
+                      href="https://medium.com/@yusufyaydemir"
+                      className="mx-2 cursor-pointer hover:text-cyan-500 duration-300 dark:text-white"
+                      target="blank"
+                    >
+                      Blog
+                    </a>
+                  </li>
+                  <li>
+                    <Link
+                      className="mx-2 cursor-pointer hover:text-cyan-500 duration-300 dark:text-white"
+                      to="contact"
+                      spy={true}
+                      smooth={true}
+                      duration={500}
+                    >
+                      Contact
+                    </Link>
+                  </li>
+                </ul>
 
-              <li>
+                {showMenu ? (
+                  <RxCross2
+                    onClick={handleMenu}
+                    className="text-3xl mx-2 sm:hidden cursor-pointer"
+                  ></RxCross2>
+                ) : (
+                  <GiHamburgerMenu
+                    onClick={handleMenu}
+                    className="text-3xl mx-2 sm:hidden cursor-pointer"
+                  ></GiHamburgerMenu>
+                )}
+
                 <a
                   href="#"
                   className="mx-2 bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded"
                 >
                   Resume
                 </a>
-              </li>
-              <li>
+
                 <BsFillMoonStarsFill
                   onClick={() => setDarkMode(!darkMode)}
                   className="cursor-pointer text-2xl dark:text-white"
                 ></BsFillMoonStarsFill>
-              </li>
-            </ul>
-          </nav>
+              </div>
+            </nav>
+
+            <div className={showMenu ? "duration-500" : "duration-500 hidden"}>
+              <ul className="flex flex-col justify-center items-center text-center">
+                <li className="p-2 w-full border-y border-black">
+                  <Link
+                    className="cursor-pointer hover:text-cyan-500 duration-300 dark:text-white"
+                    to="/"
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                    onClick={handleMenu}
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li className="p-2 w-full border-b border-black">
+                  <Link
+                    className="cursor-pointer hover:text-cyan-500 duration-300 dark:text-white"
+                    to="about"
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                    onClick={handleMenu}
+                  >
+                    About
+                  </Link>
+                </li>
+                <li className="p-2 w-full border-b border-black">
+                  <Link
+                    className="cursor-pointer hover:text-cyan-500 duration-300 dark:text-white"
+                    to="projects"
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                    onClick={handleMenu}
+                  >
+                    Projects
+                  </Link>
+                </li>
+                <li className="p-2 w-full border-b border-black">
+                  <a
+                    href="https://medium.com/@yusufyaydemir"
+                    className="mx-2 cursor-pointer hover:text-cyan-500 duration-300 dark:text-white"
+                    target="blank"
+                    onClick={handleMenu}
+                  >
+                    Blog
+                  </a>
+                </li>
+                <li className="p-2">
+                  <Link
+                    className="cursor-pointer hover:text-cyan-500 duration-300 dark:text-white"
+                    to="contact"
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                    onClick={handleMenu}
+                  >
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
 
           <div className=" w-11/12 max-w-screen-xl m-auto text-center py-10">
-            <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-56 h-56 mb-10 sm:mb-20 overflow-hidden md:w-80 md:h-80">
-              <img src={pp} alt="Profile Picture" className="w-full" />
+            <div className="mt-20 relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-56 h-56 mb-10 sm:mb-20 overflow-hidden md:w-80 md:h-80">
+              <img src={pp} alt="Profile Picture" className="w-full z-0" />
             </div>
 
             <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">
@@ -126,10 +207,10 @@ const App = () => {
           <div>
             <Lottie
               animationData={animationData}
-              className="w-3/4 lg:w-96 m-auto lg:m-0 bg-gray-200 rounded-md"
+              className="w-3/4 sm:w-2/4 md:w-1/4 lg:w-96 m-auto lg:m-0 bg-gray-200 rounded-md"
             ></Lottie>
           </div>
-          <div className="w-full lg:w-3/4 pl-0 lg:pl-10 flex flex-col justify-center">
+          <div className="w-full lg:w-3/4 pl-0 lg:pl-10 flex flex-col justify-center text-center sm:text-left">
             <h3 className="text-3xl py-1">About Me</h3>
             <p className="text-md pt-2 leading-8 text-gray-800">
               Greetings! I am Yiğit, a dedicated Frontend Developer with a
@@ -273,7 +354,9 @@ const App = () => {
           className="bg-yellow-200 w-11/12 max-w-screen-xl m-auto py-10"
         >
           <h1 className="text-3xl py-1">Contact Me</h1>
-          <p className="text-md leading-7 text-gray-800">I am open to work. Please feel free to contact me anytime.</p>
+          <p className="text-md leading-7 text-gray-800">
+            I am open to work. Please feel free to contact me anytime.
+          </p>
 
           <div className="bg-red-200 grid grid-cols-2">
             <div className="py-5 text-md leading-7 text-gray-800">
