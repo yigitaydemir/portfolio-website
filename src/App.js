@@ -1,5 +1,5 @@
 import { BsFillMoonStarsFill } from "react-icons/bs";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaRegEnvelope } from "react-icons/fa";
 import { ImNewTab } from "react-icons/im";
 import pp from "./media/ProfliePic.jpeg";
 import web1 from "./media/web1.png";
@@ -9,6 +9,8 @@ import animationData from "./media/about.json";
 import { Link } from "react-scroll";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
+import { SiLeetcode } from "react-icons/si";
+import { AiFillMediumSquare } from "react-icons/ai";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -175,7 +177,7 @@ const App = () => {
 
           <div className=" w-11/12 max-w-screen-xl m-auto text-center py-10">
             <div className="mt-20 relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-56 h-56 mb-10 sm:mb-20 overflow-hidden md:w-80 md:h-80">
-              <img src={pp} alt="Profile Picture" className="w-full z-0" />
+              <img src={pp} alt="Profile" className="w-full z-0" />
             </div>
 
             <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">
@@ -192,10 +194,10 @@ const App = () => {
 
           <div className=" w-11/12 max-w-screen-xl m-auto text-5xl flex justify-center gap-16 py-3 text-gray-600">
             <a href="https://www.linkedin.com/in/yusufyaydemir/" target="blank">
-              <FaLinkedin className="text-[#0e76a8] dark:text-white"></FaLinkedin>
+              <FaLinkedin className="text-black dark:text-white"></FaLinkedin>
             </a>
             <a href="https://github.com/yigitaydemir" target="blank">
-              <FaGithub className="text-[#c9510c] dark:text-white"></FaGithub>
+              <FaGithub className="text-black dark:text-white"></FaGithub>
             </a>
           </div>
         </section>
@@ -211,8 +213,8 @@ const App = () => {
             ></Lottie>
           </div>
           <div className="w-full lg:w-3/4 pl-0 lg:pl-10 flex flex-col justify-center text-center sm:text-left">
-            <h3 className="text-3xl py-1 text-teal-600">About Me</h3>
-            <p className="text-md pt-2 leading-8 text-gray-800 dark:text-white">
+            <h3 className="text-3xl sm:text-5xl py-1 text-teal-600">About Me</h3>
+            <p className="text-md sm:text-lg pt-2 leading-8 text-gray-800 dark:text-white">
               Greetings! I am Yiğit, a dedicated Frontend Developer with a
               strong focus on React.js and Tailwind CSS, complemented by Google
               Firebase for robust backend solutions. I'm passionate about
@@ -231,8 +233,8 @@ const App = () => {
           className="w-11/12 max-w-screen-xl m-auto pt-20 pb-10 sm:pb-0 min-h-screen"
         >
           <div className="py-5">
-            <h3 className="text-3xl py-1 text-teal-600">Projects</h3>
-            <p className="dark:text-white">
+            <h3 className="text-3xl sm:text-5xl py-1 text-teal-600">Projects</h3>
+            <p className="dark:text-white text-lg">
               I take pride in presenting the applications that showcases my
               expertise in ReactJS, exemplifying my capabilities as a skilled
               developer.
@@ -362,21 +364,47 @@ const App = () => {
 
         <section
           id="contact"
-          className="w-11/12 max-w-screen-xl m-auto min-h-screen flex flex-col justify-center pt-10 sm:pt-0"
+          className="w-11/12 max-w-screen-xl m-auto min-h-screen flex flex-col justify-center pt-10 sm:pt-0 items-center sm:items-start"
         >
-          <p className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-teal-600 font-bold">Interested? <br /> Let's Get in Touch!</p>
+          <p className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-teal-600 font-bold text-center sm:text-left">
+            Interested? <br /> Let's Get in Touch!
+          </p>
           <p className="py-10 w-3/4 text-md sm:text-lg md:text-xl lg:text-2xl leading-8 text-gray-800 dark:text-white">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim nam
-            debitis iste fugit impedit placeat eos, laudantium deleniti quam
-            architecto saepe obcaecati quod assumenda laborum voluptas? At
-            laborum neque totam?
+            To reach me quickly, please email me directly at {" "}
+            <span className="underline">yusufyigitaydemir@gmail.com</span>.
+            Alternatively, you can also check out some of my related links
+            below.
           </p>
 
-          <ul className="flex">
-            <li className="mr-4 md:mr-10 pr-4 md:pr-10 text-4xl sm:text-5xl dark:text-white"><a href="#"><FaGithub></FaGithub></a></li>
-            <li className="mr-4 md:mr-10 pr-4 md:pr-10 text-4xl sm:text-5xl dark:text-white"><a href="#"><FaGithub></FaGithub></a></li>
-            <li className="mr-4 md:mr-10 pr-4 md:pr-10 text-4xl sm:text-5xl dark:text-white"><a href="#"><FaGithub></FaGithub></a></li>
-            <li className="mr-4 md:mr-10 pr-4 md:pr-10 text-4xl sm:text-5xl dark:text-white"><a href="#"><FaGithub></FaGithub></a></li>
+          <ul className="flex justify-between items-center w-3/4 sm:w-2/4">
+            <li className="sm:mr-4 md:mr-10 sm:pr-4 md:pr-10 text-4xl sm:text-5xl dark:text-white">
+              <a
+                href="https://www.linkedin.com/in/yusufyaydemir/"
+                target="blank"
+              >
+                <FaLinkedin className=" dark:text-white"></FaLinkedin>
+              </a>
+            </li>
+            <li className="sm:mr-4 md:mr-10 sm:pr-4 md:pr-10 text-4xl sm:text-5xl dark:text-white">
+              <a href="https://github.com/yigitaydemir" target="blank">
+                <FaGithub className=" dark:text-white"></FaGithub>
+              </a>
+            </li>
+            <li className="sm:mr-4 md:mr-10 sm:pr-4 md:pr-10 text-4xl sm:text-5xl dark:text-white">
+              <a href="mailto:yusufyigitaydemir@gmail.com">
+                <FaRegEnvelope></FaRegEnvelope>
+              </a>
+            </li>
+            <li className="sm:mr-4 md:mr-10 sm:pr-4 md:pr-10 text-4xl sm:text-5xl dark:text-white">
+              <a href="https://leetcode.com/yigitaydemir/" target="blank">
+                <SiLeetcode></SiLeetcode>
+              </a>
+            </li>
+            <li className="sm:mr-4 md:mr-10 sm:pr-4 md:pr-10 text-4xl sm:text-5xl dark:text-white">
+              <a href="https://medium.com/@yusufyaydemir" target="blank">
+                <AiFillMediumSquare></AiFillMediumSquare>
+              </a>
+            </li>
           </ul>
         </section>
       </div>
