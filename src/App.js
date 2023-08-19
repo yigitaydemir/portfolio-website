@@ -2,7 +2,7 @@ import { BsFillMoonStarsFill } from "react-icons/bs";
 import { FaLinkedin, FaGithub, FaRegEnvelope } from "react-icons/fa";
 import { ImNewTab } from "react-icons/im";
 import pp from "./media/ProfliePic.jpeg";
-import web1 from "./media/web1.png";
+import coinPort from "./media/CoinPort.png";
 import { useState } from "react";
 import Lottie from "lottie-react";
 import animationData from "./media/about.json";
@@ -213,7 +213,9 @@ const App = () => {
             ></Lottie>
           </div>
           <div className="w-full lg:w-3/4 pl-0 lg:pl-10 flex flex-col justify-center text-center sm:text-left">
-            <h3 className="text-3xl sm:text-5xl py-1 text-teal-600">About Me</h3>
+            <h3 className="text-3xl sm:text-5xl py-1 text-teal-600">
+              About Me
+            </h3>
             <p className="text-md sm:text-lg pt-2 leading-8 text-gray-800 dark:text-white">
               Greetings! I am Yiğit, a dedicated Frontend Developer with a
               strong focus on React.js and Tailwind CSS, complemented by Google
@@ -233,7 +235,9 @@ const App = () => {
           className="w-11/12 max-w-screen-xl m-auto pt-20 pb-10 sm:pb-0 min-h-screen"
         >
           <div className="py-5">
-            <h3 className="text-3xl sm:text-5xl py-1 text-teal-600">Projects</h3>
+            <h3 className="text-3xl sm:text-5xl py-1 text-teal-600">
+              Projects
+            </h3>
             <p className="dark:text-white text-lg">
               I take pride in presenting the applications that showcases my
               expertise in ReactJS, exemplifying my capabilities as a skilled
@@ -242,8 +246,14 @@ const App = () => {
           </div>
 
           <div className="w-full shadow-lg p-10 rounded-xl mt-10 dark:bg-white">
-            <div className="flex flex-col xl:flex-row">
-              <img src={web1} alt="" className="w-full xl:w-2/5 rounded-lg" />
+            <div className="relative flex flex-col xl:flex-row">
+              {/* <div className="bg-[url('./media/CoinPort.png')] bg-no-repeat	bg-top bg-cover w-full xl:w-2/5 hover:translate-y-3/4">
+                <img src={coinPort} alt="" className="rounded-lg" /> 
+              </div> */}
+
+              <div className="w-full xl:w-2/5 h-[15rem] sm:h-[25rem] md:h-[30rem] xl:h-[33rem] overflow-hidden border">
+                <img src={coinPort} alt="" className="rounded-lg deneme" />
+              </div>
 
               <div className="w-full xl:w-3/5 xl:px-5">
                 <h1 className="pt-10 xl:pt-0 text-2xl">CoinPort</h1>
@@ -370,7 +380,7 @@ const App = () => {
             Interested? <br /> Let's Get in Touch!
           </p>
           <p className="py-10 w-3/4 text-md sm:text-lg md:text-xl lg:text-2xl leading-8 text-gray-800 dark:text-white">
-            To reach me quickly, please email me directly at {" "}
+            To reach me quickly, please email me directly at{" "}
             <span className="underline">yusufyigitaydemir@gmail.com</span>.
             Alternatively, you can also check out some of my related links
             below.
