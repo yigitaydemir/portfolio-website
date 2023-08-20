@@ -6,6 +6,7 @@ import coinPort from "./media/CoinPort.png";
 import { useState } from "react";
 import Lottie from "lottie-react";
 import animationData from "./media/about.json";
+import resume from "./media/resume.pdf";
 import { Link } from "react-scroll";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
@@ -98,7 +99,8 @@ const App = () => {
                 )}
 
                 <a
-                  href="#"
+                  href={resume}
+                  target="blank"
                   className="mx-2 bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded"
                 >
                   Resume
@@ -247,7 +249,6 @@ const App = () => {
 
           <div className="w-full shadow-lg p-10 rounded-xl mt-10 dark:bg-white">
             <div className="relative flex flex-col xl:flex-row">
-
               <div className="w-full xl:w-2/5 h-[21rem] sm:h-[24rem] md:h-[27rem] lg:h-[30rem] xl:h-[33rem] overflow-hidden">
                 <img src={coinPort} alt="" className="rounded-lg coinportimg" />
               </div>
