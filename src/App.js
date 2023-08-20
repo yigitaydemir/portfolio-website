@@ -247,12 +247,9 @@ const App = () => {
 
           <div className="w-full shadow-lg p-10 rounded-xl mt-10 dark:bg-white">
             <div className="relative flex flex-col xl:flex-row">
-              {/* <div className="bg-[url('./media/CoinPort.png')] bg-no-repeat	bg-top bg-cover w-full xl:w-2/5 hover:translate-y-3/4">
-                <img src={coinPort} alt="" className="rounded-lg" /> 
-              </div> */}
 
-              <div className="w-full xl:w-2/5 h-[15rem] sm:h-[25rem] md:h-[30rem] xl:h-[33rem] overflow-hidden border">
-                <img src={coinPort} alt="" className="rounded-lg deneme" />
+              <div className="w-full xl:w-2/5 h-[21rem] sm:h-[24rem] md:h-[27rem] lg:h-[30rem] xl:h-[33rem] overflow-hidden">
+                <img src={coinPort} alt="" className="rounded-lg coinportimg" />
               </div>
 
               <div className="w-full xl:w-3/5 xl:px-5">

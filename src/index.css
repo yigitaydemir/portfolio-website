@@ -17,36 +17,36 @@ body {
 }
 
 @media screen and (max-width: 640px) {
-  .deneme:hover {
-    transform: translateY(-77%);
-    transition: transform 5s ease-in-out 0s;
-  }
-}
-
-@media screen and (min-width: 640px) {
-  .deneme:hover {
+  .coinportimg:hover {
     transform: translateY(-74%);
     transition: transform 5s ease-in-out 0s;
   }
 }
 
-@media screen and (min-width: 768px) {
-  .deneme:hover {
-    transform: translateY(-75%);
-    transition: transform 5s ease-in-out 0s;
-  }
-}
-
-@media screen and (min-width: 860px) {
-  .deneme:hover {
+@media screen and (min-width: 640px) {
+  .coinportimg:hover {
     transform: translateY(-77%);
     transition: transform 5s ease-in-out 0s;
   }
 }
 
+@media screen and (min-width: 768px) {
+  .coinportimg:hover {
+    transform: translateY(-81%);
+    transition: transform 5s ease-in-out 0s;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .coinportimg:hover {
+    transform: translateY(-82%);
+    transition: transform 5s ease-in-out 0s;
+  }
+}
+
 @media screen and (min-width: 1280px) {
-  .deneme:hover {
-    transform: translateY(-62%);
+  .coinportimg:hover {
+    transform: translateY(-61%);
     transition: transform 5s ease-in-out 0s;
   }
 }
