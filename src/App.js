@@ -227,7 +227,11 @@ const App = () => {
               a journey to learn Redux, Next.js, TypeScript, testing, and cloud
               technologies like AWS. I thrive in collaborative environments and
               always seek opportunities to grow and make a positive impact
-              through my work. Feel free to contact me anytime on any platform.
+              through my work. Feel free to{" "}
+              <a href="#contact" className="text-teal-600">
+                contact me
+              </a>{" "}
+              anytime on any platform.
             </p>
           </div>
         </section>
@@ -357,6 +361,115 @@ const App = () => {
                   <li className="m-1 p-1 flex items-center text-xl">
                     <a
                       href="https://coinport.vercel.app/"
+                      target="blank"
+                      className="p-1"
+                    >
+                      Demo
+                    </a>
+                    <ImNewTab></ImNewTab>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="w-full shadow-lg p-10 rounded-xl mt-10 dark:bg-white">
+            <div className="relative flex flex-col xl:flex-row">
+              <div className="w-full xl:w-2/5 h-[21rem] sm:h-[24rem] md:h-[27rem] lg:h-[30rem] xl:h-[33rem] overflow-hidden">
+                <img src={coinPort} alt="" className="rounded-lg coinportimg" />
+              </div>
+
+              <div className="w-full xl:w-3/5 xl:px-5">
+                <h1 className="pt-10 xl:pt-0 text-2xl">TypeRapid</h1>
+                <p className="py-5 text-md leading-7 text-gray-800">
+                  Typerapid represents a dynamic speed typing game that
+                  challenges players to achieve peak performance by accurately
+                  typing words before they elapse from the screen. Adding to the
+                  complexity, words gradually increase in size and velocity as
+                  players advance through the game, testing and enhancing their
+                  typing agility. Furthermore, we encourage you to record your
+                  scores, securing your place on the leaderboard, and enabling
+                  you to engage in friendly competition with your peers.
+                </p>
+                <ul className="list-disc px-4 text-md leading-7 text-gray-800">
+                  <li>
+                    The game is developed with{" "}
+                    <a
+                      href="https://legacy.reactjs.org/"
+                      target="blank"
+                      className="text-cyan-800"
+                    >
+                      ReactJS
+                    </a>
+                    , a highly capable and widely adopted JavaScript framework
+                    renowned for its robust features and capabilities.
+                  </li>
+                  <li>
+                    The words within the game are dynamically retrieved in a
+                    randomized fashion from the{" "}
+                    <a
+                      href="https://random-word-api.herokuapp.com/home"
+                      target="blank"
+                      className="text-cyan-800"
+                    >
+                      Random Word API
+                    </a>
+                    , enhancing the unpredictability and diversity of gameplay
+                    elements.
+                  </li>
+                  <li>
+                    The game's animations are created using the{" "}
+                    <a
+                      href="https://www.framer.com/motion/"
+                      target="blank"
+                      className="text-cyan-800"
+                    >
+                      Framer Motion library
+                    </a>
+                    , allowing for the creation of visually engaging and dynamic
+                    user experiences.
+                  </li>
+                  <li>
+                    Styling is implemented with{" "}
+                    <a
+                      href="https://tailwindcss.com/"
+                      target="blank"
+                      className="text-cyan-800"
+                    >
+                      TailwindCSS
+                    </a>
+                    , to ensure a polished and consistent visual appearance.
+                  </li>
+                  <li>
+                    In order to maintain an up-to-date record of leaderboard
+                    scores, a secure and reliable storage solution is
+                    integrated, utilizing{" "}
+                    <a
+                      href="https://firebase.google.com/docs/firestore/quickstart?hl=tr"
+                      target="blank"
+                      className="text-cyan-800"
+                    >
+                      Google Firestore
+                    </a>
+                    , a scalable NoSQL database service provided by Google Cloud
+                    Platform.
+                  </li>
+                </ul>
+
+                <ul className="flex justify-center">
+                  <li className="m-1 p-1 flex items-center text-xl">
+                    <a
+                      href="https://github.com/yigitaydemir/typerapid"
+                      target="blank"
+                      className="p-1"
+                    >
+                      Code
+                    </a>
+                    <FaGithub></FaGithub>
+                  </li>
+                  <li className="m-1 p-1 flex items-center text-xl">
+                    <a
+                      href="https://typerapid.vercel.app/"
                       target="blank"
                       className="p-1"
                     >
