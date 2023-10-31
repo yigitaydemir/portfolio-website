@@ -3,6 +3,7 @@ import { FaLinkedin, FaGithub, FaRegEnvelope } from "react-icons/fa";
 import { ImNewTab } from "react-icons/im";
 import pp from "./media/ProfliePic.jpeg";
 import coinPort from "./media/CoinPort.png";
+import typeRapid from "./media/TypeRapid.jpg";
 import { useState } from "react";
 import Lottie from "lottie-react";
 import animationData from "./media/about.json";
@@ -221,13 +222,15 @@ const App = () => {
             <p className="text-md sm:text-lg pt-2 leading-8 text-gray-800 dark:text-white">
               Greetings! I am Yiğit, a dedicated Frontend Developer with a
               strong focus on React.js and Tailwind CSS, complemented by Google
-              Firebase for robust backend solutions. I'm passionate about
+              Firebase for robust backend solutions. I am passionate about
               crafting engaging user experiences and transforming designs into
               functional web applications. Eager to expand my skill set, I'm on
               a journey to learn Redux, Next.js, TypeScript, testing, and cloud
-              technologies like AWS. I thrive in collaborative environments and
-              always seek opportunities to grow and make a positive impact
-              through my work. Feel free to{" "}
+              technologies like AWS. In addition, I am always looking for new
+              ways to integrate AI into my workflow and increase my
+              productivity. I thrive in collaborative environments and always
+              seek opportunities to grow and make a positive impact through my
+              work. Feel free to{" "}
               <a href="#contact" className="text-teal-600">
                 contact me
               </a>{" "}
@@ -376,7 +379,11 @@ const App = () => {
           <div className="w-full shadow-lg p-10 rounded-xl mt-10 dark:bg-white">
             <div className="relative flex flex-col xl:flex-row">
               <div className="w-full xl:w-2/5 h-[21rem] sm:h-[24rem] md:h-[27rem] lg:h-[30rem] xl:h-[33rem] overflow-hidden">
-                <img src={coinPort} alt="" className="rounded-lg coinportimg" />
+                <img
+                  src={typeRapid}
+                  alt=""
+                  className="rounded-lg coinportimg"
+                />
               </div>
 
               <div className="w-full xl:w-3/5 xl:px-5">
