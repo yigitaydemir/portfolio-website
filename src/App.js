@@ -413,7 +413,7 @@ const App = () => {
                   </li>
                   <li>
                     The words within the game are dynamically retrieved in a
-                    randomized fashion from the{" "}
+                    randomized manner from the{" "}
                     <a
                       href="https://random-word-api.herokuapp.com/home"
                       target="blank"
@@ -437,7 +437,7 @@ const App = () => {
                     user experiences.
                   </li>
                   <li>
-                    Styling is implemented with{" "}
+                    Styling is implemented using{" "}
                     <a
                       href="https://tailwindcss.com/"
                       target="blank"
@@ -450,7 +450,7 @@ const App = () => {
                   <li>
                     In order to maintain an up-to-date record of leaderboard
                     scores, a secure and reliable storage solution is
-                    integrated, utilizing{" "}
+                    integrated, using{" "}
                     <a
                       href="https://firebase.google.com/docs/firestore/quickstart?hl=tr"
                       target="blank"
