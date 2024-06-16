@@ -536,11 +536,11 @@ const App = () => {
           </ul>
         </section>
 
-        <section id="footer">
+        {/* <section id="footer">
           <div className="w-11/12 max-w-screen-xl m-auto flex flex-col justify-center pt-2 items-center sm:items-start">
             <h1 className="dark:text-teal-600">Erlik LLC, 2024</h1>
           </div>
-        </section>
+        </section> */}
       </div>
     </div>
   );
