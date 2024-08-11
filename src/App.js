@@ -274,7 +274,7 @@ const App = () => {
                   <li>
                     The application is developed using{" "}
                     <a
-                      href="https://legacy.reactjs.org/"
+                      href="https://react.dev/"
                       target="blank"
                       className="text-cyan-800"
                     >
@@ -339,7 +339,7 @@ const App = () => {
                   <li>
                     Watchlist feature powered by{" "}
                     <a
-                      href="https://firebase.google.com/docs/firestore/quickstart?hl=tr"
+                      href="https://firebase.google.com/docs/firestore/quickstart?hl=en"
                       target="blank"
                       className="text-cyan-800"
                     >
@@ -402,7 +402,7 @@ const App = () => {
                   <li>
                     The game is developed with{" "}
                     <a
-                      href="https://legacy.reactjs.org/"
+                      href="https://react.dev/"
                       target="blank"
                       className="text-cyan-800"
                     >
@@ -452,7 +452,7 @@ const App = () => {
                     scores, a secure and reliable storage solution is
                     integrated, using{" "}
                     <a
-                      href="https://firebase.google.com/docs/firestore/quickstart?hl=tr"
+                      href="https://firebase.google.com/docs/firestore/quickstart?hl=en"
                       target="blank"
                       className="text-cyan-800"
                     >
@@ -535,12 +535,6 @@ const App = () => {
             </li>
           </ul>
         </section>
-
-        {/* <section id="footer">
-          <div className="w-11/12 max-w-screen-xl m-auto flex flex-col justify-center pt-2 items-center sm:items-start">
-            <h1 className="dark:text-teal-600">Erlik LLC, 2024</h1>
-          </div>
-        </section> */}
       </div>
     </div>
   );
