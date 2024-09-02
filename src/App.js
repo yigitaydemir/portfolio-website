@@ -224,9 +224,7 @@ const App = () => {
               strong focus on React.js and Tailwind CSS, complemented by Google
               Firebase for robust backend solutions. I am passionate about
               crafting engaging user experiences and transforming designs into
-              functional web applications. Eager to expand my skill set, I'm on
-              a journey to learn Redux, Next.js, TypeScript, testing, and cloud
-              technologies like AWS. In addition, I am always looking for new
+              functional web applications. In addition, I am always looking for new
               ways to integrate AI into my workflow and increase my
               productivity. I thrive in collaborative environments and always
               seek opportunities to grow and make a positive impact through my
