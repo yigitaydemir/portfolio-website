@@ -1,7 +1,7 @@
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { FaLinkedin, FaGithub, FaRegEnvelope } from "react-icons/fa";
 import { ImNewTab } from "react-icons/im";
-import pp from "./media/ProfliePic.jpeg";
+import pp from "./media/ProfilePic.png";
 import coinPort from "./media/CoinPort.png";
 import typeRapid from "./media/TypeRapid.jpg";
 import { useState } from "react";
